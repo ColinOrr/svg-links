@@ -2,5 +2,11 @@
   "name": "svg-links",
   "version": "0.1.0",
   "author": "Colin Orr",
-  "private": true
+  "private": true,
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "koa": "^2.3.0"
+  }
 }
