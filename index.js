@@ -1,8 +1,13 @@
 const Koa = require('koa');
-const app = new Koa();
+const Router = require('koa-router');
 
-app.use(async ctx => {
+const app = new Koa();
+const router = new Router();
+
+router.get('/', ctx => {
   ctx.body = 'Hello World';
 });
 
-app.listen(3000);
+app
+  .use(router.routes())
+  .listen(3000);
