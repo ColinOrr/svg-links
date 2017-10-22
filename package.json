@@ -4,10 +4,14 @@
   "author": "Colin Orr",
   "private": true,
   "scripts": {
-    "start": "node index.js"
+    "start": "node ./node_modules/nodemon/bin/nodemon.js index.js"
   },
   "dependencies": {
     "koa": "^2.3.0",
-    "koa-router": "^7.2.1"
+    "koa-router": "^7.2.1",
+    "liquidjs": "^1.9.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
   }
 }

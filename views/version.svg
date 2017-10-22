@@ -1,0 +1,23 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="{{left | plus: right}}" height="20">
+  <linearGradient id="b" x2="0" y2="100%">
+    <stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
+    <stop offset="1" stop-opacity=".1"/>
+  </linearGradient>
+  <clipPath id="a">
+    <rect width="{{left | plus: right}}" height="20" rx="3" fill="#fff"/>
+  </clipPath>
+  <g clip-path="url(#a)">
+    <path fill="#555" d="M0 0 h{{left}} v20 H0 z"/>
+    <path fill="#007ec6" d="M{{left}} 0 h{{right}} v20 H{{left}} z"/>
+    <path fill="url(#b)" d="M0 0 h{{left | plus: right}} v20 H0 z"/>
+  </g>
+  <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
+    <text x="{{left  | divided_by: 2}}" y="15" fill="#010101" fill-opacity=".3">{{project}}</text>
+    <text x="{{left  | divided_by: 2}}" y="14">{{project}}</text>
+    <text x="{{right | divided_by: 2 | plus: left}}" y="15" fill="#010101" fill-opacity=".3">{{version}}</text>
+    <text x="{{right | divided_by: 2 | plus: left}}" y="14">{{version}}</text>
+  </g>
+</svg>
