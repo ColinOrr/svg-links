@@ -4,5 +4,6 @@ services:
     build: .
     working_dir: /code
     command: npm start
+    restart: always
     expose:
       - 80
