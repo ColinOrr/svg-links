@@ -6,10 +6,6 @@ const app = new Koa();
 const router = new Router();
 const liquid = new Liquid({ root: './views/' });
 
-router.get('/', ctx => {
-  ctx.body = 'Hello World';
-});
-
 router.get('/version', async ctx => {
   let params = { project: 'svg-links', version: 'v1.4.8', left: 60, right: 45 };
   ctx.body = await liquid.renderFile('version.svg', params);
@@ -18,4 +14,4 @@ router.get('/version', async ctx => {
 
 app
   .use(router.routes())
-  .listen(3000);
+  .listen(80, () => console.log('listening on port 80'));

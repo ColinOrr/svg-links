@@ -1,0 +1,8 @@
+version: '2'
+services:
+  svglinks_web:
+    build: .
+    working_dir: /code
+    command: npm start
+    expose:
+      - 80

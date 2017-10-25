@@ -1,0 +1,12 @@
+version: '2'
+services:
+  svglinks_web:
+    image: node:8.8.0
+    working_dir: /code
+    command: bash
+    volumes:
+      - .:/code
+    ports:
+      - 80:80
+    environment:
+      - PATH=/code/node_modules/.bin:$PATH
